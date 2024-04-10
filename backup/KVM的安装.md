@@ -1,4 +1,4 @@
-##kvm相关安装包及其作用:
+## kvm相关安装包及其作用:
 qemu-kvm 主要的KVM程序包
 python-virtinst 创建虚拟机所需要的命令行工具和程序库
 virt-manager GUI虚拟机管理工具
@@ -8,7 +8,7 @@ libvirt C语言工具包，提供libvirt服务
 libvirt-client 为虚拟客户机提供的C语言工具包
 virt-install 基于libvirt服务的虚拟机创建命令
 bridge-utils 创建和管理桥接设备的工具
-##KVM软件安装（方法一）
+## KVM软件安装（方法一）
 1、 环境准备
 关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为 SELinux=disabled
 vi /etc/sysconfig/selinux
@@ -30,7 +30,7 @@ systemctl enable libvirtd
 6、查看状态操作结果，如Active: active (running)，说明运行情况良好
 systemctl status libvirtd
 systemctl is-enabled libvirtd
-##KVM软件安装（方法二）
+## KVM软件安装（方法二）
 1、检测是否支持KVM
 cat /proc/cpuinfo | egrep 'vmx|svm'
 2、关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为SELinux=disabled

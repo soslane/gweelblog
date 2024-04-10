@@ -65,8 +65,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>##kvm相关安装包及其作用:<br>
-qemu-kvm 主要的KVM程序包<br>
+<div class="markdown-body" id="postBody"><h2>kvm相关安装包及其作用:</h2>
+<p>qemu-kvm 主要的KVM程序包<br>
 python-virtinst 创建虚拟机所需要的命令行工具和程序库<br>
 virt-manager GUI虚拟机管理工具<br>
 virt-top 虚拟机统计命令<br>
@@ -74,9 +74,9 @@ virt-viewer GUI连接程序，连接到已配置好的虚拟机<br>
 libvirt C语言工具包，提供libvirt服务<br>
 libvirt-client 为虚拟客户机提供的C语言工具包<br>
 virt-install 基于libvirt服务的虚拟机创建命令<br>
-bridge-utils 创建和管理桥接设备的工具<br>
-##KVM软件安装（方法一）<br>
-1、 环境准备<br>
+bridge-utils 创建和管理桥接设备的工具</p>
+<h2>KVM软件安装（方法一）</h2>
+<p>1、 环境准备<br>
 关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为 SELinux=disabled<br>
 vi /etc/sysconfig/selinux<br>
 查看CPU是否⽀持VT技术<br>
@@ -96,9 +96,9 @@ systemctl start libvirtd<br>
 systemctl enable libvirtd<br>
 6、查看状态操作结果，如Active: active (running)，说明运行情况良好<br>
 systemctl status libvirtd<br>
-systemctl is-enabled libvirtd<br>
-##KVM软件安装（方法二）<br>
-1、检测是否支持KVM<br>
+systemctl is-enabled libvirtd</p>
+<h2>KVM软件安装（方法二）</h2>
+<p>1、检测是否支持KVM<br>
 cat /proc/cpuinfo | egrep 'vmx|svm'<br>
 2、关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为SELinux=disabled<br>
 vi /etc/sysconfig/selinux<br>
