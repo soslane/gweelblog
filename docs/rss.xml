@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Fake it till you make it</title><link>https://soslane.github.io</link><description>Less is more</description><copyright>Fake it till you make it</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png</url><title>avatar</title><link>https://soslane.github.io</link></image><lastBuildDate>Wed, 17 Apr 2024 07:09:11 +0000</lastBuildDate><managingEditor>Fake it till you make it</managingEditor><ttl>60</ttl><webMaster>Fake it till you make it</webMaster><item><title>虚拟化技术—管理虚拟磁盘</title><link>https://soslane.github.io/post/xu-ni-hua-ji-shu-%E2%80%94-guan-li-xu-ni-ci-pan.html</link><description>## 一、稀疏文件与非稀疏文件&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Fake it till you make it</title><link>https://soslane.github.io</link><description>Less is more</description><copyright>Fake it till you make it</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png</url><title>avatar</title><link>https://soslane.github.io</link></image><lastBuildDate>Thu, 25 Apr 2024 11:59:05 +0000</lastBuildDate><managingEditor>Fake it till you make it</managingEditor><ttl>60</ttl><webMaster>Fake it till you make it</webMaster><item><title>4B英语闯关纸</title><link>https://soslane.github.io/post/4B-ying-yu-chuang-guan-zhi.html</link><description>&lt;html&gt;&#13;
+&lt;body&gt;&#13;
+&lt;!--StartFragment--&gt;&lt;h2&gt;Unit1&lt;/h2&gt;&#13;
+&#13;
+  | 语文、汉语、中国人、中国的、中国人的 |   | 课程、主题&#13;
+-- | -- | -- | --&#13;
+  | 数学 |   | 课&#13;
+  | 英语、英国人、英国的、英国人的 |   | 课程表、时间表&#13;
+  | 音乐 |   | 操场&#13;
+  | 科学 |   | 周一&#13;
+  | 美术 |   | 乐趣、快乐&#13;
+  | 体育 |   | 欢迎&#13;
+  | 学校 |   | 后面的，回到&#13;
+&#13;
+&#13;
+&lt;!-- notionvc: b22fbb97-97f0-4972-ae81-1def92ea1426 --&gt;&lt;!--EndFragment--&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;。</description><guid isPermaLink="true">https://soslane.github.io/post/4B-ying-yu-chuang-guan-zhi.html</guid><pubDate>Thu, 25 Apr 2024 11:58:35 +0000</pubDate></item><item><title>虚拟化技术—管理虚拟磁盘</title><link>https://soslane.github.io/post/xu-ni-hua-ji-shu-%E2%80%94-guan-li-xu-ni-ci-pan.html</link><description>## 一、稀疏文件与非稀疏文件&#13;
 稀疏文件（sparse file）和非稀疏文件（non-sparse file）是指在存储介质上分配空间的方式不同的两种文件类型。</description><guid isPermaLink="true">https://soslane.github.io/post/xu-ni-hua-ji-shu-%E2%80%94-guan-li-xu-ni-ci-pan.html</guid><pubDate>Wed, 17 Apr 2024 07:08:44 +0000</pubDate></item><item><title>虚拟化技术—虚拟机的创建</title><link>https://soslane.github.io/post/xu-ni-hua-ji-shu-%E2%80%94-xu-ni-ji-de-chuang-jian.html</link><description>## 一、利用图形化界面安装&#13;
 1、打开图形化界面&#13;
 利用命令virt-manager&#13;
