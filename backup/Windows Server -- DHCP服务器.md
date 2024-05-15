@@ -25,31 +25,31 @@ DHCP租约更新是指客户端续租其已经分配的IP地址及其他网络�
 
 **安装DHCP服务器角色**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/9910699e-9863-4de4-9801-16b1acc08b45/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214028.png)
 
 **DHCP控制台**
 
 DHCP服务器安装成功后，开始菜单—管理工具—DHCP服务器，进入DHCP控制台。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/ec28fe76-5385-4902-9770-251937e555b1/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214105.png)
 
 **创建作用域**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/40ddfff1-0106-4124-9807-4e47704a1b71/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214206.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/6925bd5c-91ff-4201-a46b-8c8a9a05aedf/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214229.png)
 
 **配置作用域选项**
 
 配置作用域选项，DHCP服务器可以给客户机分配网关及DNS等相应的网络配置信息。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/4b8a1622-406a-4f43-896f-9ef682f48e7b/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214250.png)
 
 **如何保留特定地址**
 
 如果用户想保留特定的IP地址给指定的客户机，以便客户机在每次启动时都获得相同的IP地址，就需要将该IP地址与客户机的MAC地址绑定。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/5fcedfed-7367-4e56-a587-e4c90e9e8609/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214314.png)
 
 可以用客户机进行测试
 
@@ -62,21 +62,21 @@ DHCP服务器安装成功后，开始菜单—管理工具—DHCP服务器，进
 通过策略为特定的客户端计算机分配不同的IP地址与选项时，可以通过DHCP客户端所发送的**供应商类别、用户类**来区分客户端计算机。
 EX：通过用户类标识符来识别客户端计算机——假设客户端client1的用户类标识符为“IT”。当client1向DHCP服务器租用IP地址时，会将此标识符“IT”传递给服务器，我们希望服务器根据此标识符来分配客户端的IP地址范围为192.168.10.150/24-192.168.10.180/24，并且将客户端的DNS服务器的IP地址设置为192.168.10.1。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/7999a32f-76a9-425c-b6b3-7f92a9cb23ae/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214342.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/68573912-5380-47f4-b8f3-74816c28e9d8/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214404.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/7c7a3204-21f3-49f6-94b8-76bf2a9cdb59/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214420.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/26354a1e-85c5-45a2-b08e-4911db589520/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214444.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/18a7c00b-e8bc-4814-ac7c-3c9110f2518c/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214502.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/64df04cb-d195-4d34-b124-c3a6f1663e31/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214520.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/e49cbb13-ed24-43a6-a471-de0e313b8051/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214558.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/baae6ddc-006c-47cc-a0a0-2839f0ccbdce/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214615.png)
 
 ## 五、DHCP中继代理
 
@@ -93,38 +93,38 @@ EX：通过用户类标识符来识别客户端计算机——假设客户端cli
 
 **符合RFC 1542规范的路由器** 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/0c3fdf33-dc27-454f-b9a0-85b984eb29f2/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214635.png)
 
 **如果路由器不符合RFC 1542规范**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/1911a731-7f5b-43d7-836f-339e845e2fd0/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214652.png)
 
 ## 六、无线中继配置
 
 实验环境拓扑图
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/fec216c1-acc5-47c9-a959-1924924dae34/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214714.png)
 
 1、在GW1上安装路由和远程访问
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/eb08d778-5a74-4c07-a087-c5fb1aa43feb/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214737.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/a1587584-4537-484e-bc69-6422c846847d/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214823.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/3c577a93-24c6-4694-8763-7a5e22cace6f/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214841.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/952909b3-4dcf-46e8-bf7f-64e49145e0a2/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214925.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/72fb5e1c-60b5-4a8f-93a0-a3a06603844c/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214946.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/bda9d68f-c0ae-4198-91a2-a3574a960207/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515214959.png)
 
 2、在GW1上设置中继代理
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/b080ba6a-b0f0-48b6-983a-06d277ac58fe/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515215014.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/c6904981-b5e6-44e9-a59b-d96a815a0b45/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515215030.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/7764af56-a260-4f2a-bcda-49ab5ce11394/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515215043.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/06074db3-42fc-4a83-b0ba-a5bba23b02a5/3860d36d-2be9-4e78-9e3d-91ceaa88e379/Untitled.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515215100.png)
