@@ -40,7 +40,7 @@
 <p><strong>镜像卷的缺点</strong></p>
 <p>镜像卷的主要缺点是成本较高。 这是因为它们需要比简单卷或动态卷更多的物理磁盘。 此外，镜像卷会降低写入性能，因为必须将数据写入到所有镜像磁盘上。
 • <strong>RAID-5 卷 (RAID-5 volume)：</strong> RAID-5 卷由三块或多块物理磁盘组成。 它使用一种称为奇偶校验的技术来保护数据。 如果一块物理磁盘发生故障，RAID-5 卷仍可继续运行，并且可以从奇偶校验数据重建丢失的数据。 RAID-5 卷通常用于存储需要高性能和数据保护的应用程序，例如数据库和文件服务器。
-![image](https://github.com/soslane/soslane.github.io/assets/149466045/3f879689-8c43-466d-8d28-432d75ba5ad5)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515212739.png)
 </p>
 <!-- notionvc: bec72608-4de9-4546-82d4-b0aa0c2e31b2 --><!--EndFragment-->
 </body>
