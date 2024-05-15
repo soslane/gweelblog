@@ -146,7 +146,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>6、添加额外的域控制器</h3>
 <p>为了提高冗余性和灾难恢复能力，您可能需要在您的网络中添加额外的域控制器。这可以通过运行“提升域功能”向导并选择“添加域控制器到现有域”选项来完成。完成这个过程后，新的域控制器将自动复制现有的域信息并开始接受请求。</p>
 <p>其中如何利用介质来安装？输入以下命令即可，代码含义是在c盘根目录下创建一个123的备份镜像。</p>
-<p><code class="notranslate">ntdsutil activate instance ntds ifm creat sysvol full c:\123</code></p>
+<p><strong>ntdsutil<br>
+activate instance ntds<br>
+ifm<br>
+creat sysvol full c:\123</strong></p>
 <h3>7、什么是子域</h3>
 <p>子域是父域下的一个或多个附属域，它继承了父域的一些设置和策略。子域可以用于划分网络资源，提高管理效率和安全性。</p>
 <h3>8、域林</h3>

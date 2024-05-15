@@ -51,10 +51,10 @@
 
 其中如何利用介质来安装？输入以下命令即可，代码含义是在c盘根目录下创建一个123的备份镜像。
 
-`ntdsutil
+**ntdsutil
 activate instance ntds
 ifm
-creat sysvol full c:\123`
+creat sysvol full c:\123**
 
 ### 7、什么是子域
 
