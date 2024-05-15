@@ -9,49 +9,17 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## 一、利用图形化界面安装
-1、打开图形化界面
-利用命令virt-manager
-或者点击Applications——SystemTools——Virtual Machine Manager
-notion image
-2、开始安装
+<meta name="description" content="## 一、什么是DNS
 
- 
-## 二、利用命令安装虚拟机
-1、利用qemu-img创建虚拟机的虚拟磁盘
-qemu-img create -f qcow2 /var/lib/libvirt/images/vm2.qcow2 1G
-2、查看所创建的虚拟磁盘的信息
-qemu-img info /var/lib/libvirt/images/vm2.qcow2
-3、利用virt-install命令创建虚拟机
-virt-install --name=vm2 --disk path=/var/lib/libvirt/images/vm2.qcow2 --vcpus=1 --ram=512 --cdrom=/vm/iso/Core-11.1.iso --network network=default --os-type=linux
-4、利用virsh命令查看虚拟机
-virsh list —all
-5、virt-install 参数说明
-virt-install 是一个用于创建新虚拟机的命令行工具，它有许多参数可以配置虚拟机的各种设置。">
-<meta property="og:title" content="虚拟化技术—虚拟机的创建">
-<meta property="og:description" content="## 一、利用图形化界面安装
-1、打开图形化界面
-利用命令virt-manager
-或者点击Applications——SystemTools——Virtual Machine Manager
-notion image
-2、开始安装
+DNS服务器（Domain Name System Server）是一种网络服务器，它负责将域名转换为相应的IP地址。">
+<meta property="og:title" content="Windows Server 2016 --DNS服务器">
+<meta property="og:description" content="## 一、什么是DNS
 
- 
-## 二、利用命令安装虚拟机
-1、利用qemu-img创建虚拟机的虚拟磁盘
-qemu-img create -f qcow2 /var/lib/libvirt/images/vm2.qcow2 1G
-2、查看所创建的虚拟磁盘的信息
-qemu-img info /var/lib/libvirt/images/vm2.qcow2
-3、利用virt-install命令创建虚拟机
-virt-install --name=vm2 --disk path=/var/lib/libvirt/images/vm2.qcow2 --vcpus=1 --ram=512 --cdrom=/vm/iso/Core-11.1.iso --network network=default --os-type=linux
-4、利用virsh命令查看虚拟机
-virsh list —all
-5、virt-install 参数说明
-virt-install 是一个用于创建新虚拟机的命令行工具，它有许多参数可以配置虚拟机的各种设置。">
+DNS服务器（Domain Name System Server）是一种网络服务器，它负责将域名转换为相应的IP地址。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://soslane.github.io/post/xu-ni-hua-ji-shu-%E2%80%94-xu-ni-ji-de-chuang-jian.html">
+<meta property="og:url" content="https://soslane.github.io/post/Windows%20Server%202016%20--DNS-fu-wu-qi.html">
 <meta property="og:image" content="https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png">
-<title>虚拟化技术—虚拟机的创建</title>
+<title>Windows Server 2016 --DNS服务器</title>
 
 
 </head>
@@ -82,7 +50,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">虚拟化技术—虚拟机的创建</h1>
+<h1 class="postTitle">Windows Server 2016 --DNS服务器</h1>
 <div class="title-right">
     <a href="https://soslane.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -90,7 +58,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/soslane/soslane.github.io/issues/5" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/soslane/soslane.github.io/issues/9" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -106,70 +74,101 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>一、利用图形化界面安装</h2>
-<p>1、打开图形化界面<br>
-利用命令virt-manager<br>
-或者点击Applications——SystemTools——Virtual Machine Manager<br>
-notion image<br>
-2、开始安装</p>
-<h2>二、利用命令安装虚拟机</h2>
-<p>1、利用qemu-img创建虚拟机的虚拟磁盘<br>
-qemu-img create -f qcow2 /var/lib/libvirt/images/vm2.qcow2 1G<br>
-2、查看所创建的虚拟磁盘的信息<br>
-qemu-img info /var/lib/libvirt/images/vm2.qcow2<br>
-3、利用virt-install命令创建虚拟机<br>
-virt-install --name=vm2 --disk path=/var/lib/libvirt/images/vm2.qcow2 --vcpus=1 --ram=512 --cdrom=/vm/iso/Core-11.1.iso --network network=default --os-type=linux<br>
-4、利用virsh命令查看虚拟机<br>
-virsh list —all<br>
-5、virt-install 参数说明<br>
-virt-install 是一个用于创建新虚拟机的命令行工具，它有许多参数可以配置虚拟机的各种设置。以下是一些常用的 virt-install 命令参数及其详细说明：<br>
--n 或 --name: 指定虚拟机的名称。<br>
--r 或 --ram: 以 MB 为单位指定虚拟机的内存大小。<br>
---vcpus: 配置虚拟 CPU 的数量，可以指定最大 vCPU 数量、套接字数、核心数和线程数。<br>
---disk: 指定存储选项，如磁盘路径、大小（GB）、格式等。<br>
--w 或 --network: 配置网络接口，可以指定桥接或网络名称、模型、MAC 地址等。<br>
---graphics: 配置图形显示，如 VNC 或 Spice，以及相关的端口、密码等。<br>
---os-type: 指定操作系统类型，如 linux、unix 或 windows。<br>
---os-variant: 指定操作系统的变体，如 fedora、rhel 等。<br>
---location: 指定安装源的 URL，支持 FTP、HTTP 和 NFS。<br>
---cdrom: 使用光盘作为安装介质。<br>
---pxe: 使用 PXE 从网络引导安装。<br>
---import: 导入现有磁盘映像而不进行安装。<br>
---autostart: 设置虚拟机随宿主机启动时自动启动。<br>
-这些参数可以组合使用，以满足特定的虚拟机配置需求。例如，创建一个名为 “myvm”、内存为 2048MB、单个 vCPU、并使用本地 ISO 文件作为安装介质的虚拟机的命令如下：<br>
-virt-install --name myvm --ram 2048 --vcpus 1 --disk path=/var/lib/libvirt/images/myvm.img,size=10 --cdrom /path/to/install.iso --os-type linux --os-variant ubuntu20.04</p>
-<h2>三、利用配置文件创建虚拟机</h2>
-<p>虚拟机的组成部分<br>
-1、虚拟机配置⽂件<br>
-2、储存虚拟机的介质<br>
-3、根据配置⽂件创建虚拟机</p>
-<p>a.需要有磁盘镜像⽂件：<br>
-cp vm3.qcow2 vm4.img<br>
-b.需要有配置⽂件<br>
-cp vm3.xml vm4.xml<br>
-c.配置⽂件需要修改必要的内容<br>
-d.创建虚拟机<br>
-virsh define /etc/libvirt/qemu/vm4.xml</p>
-<h2>具体步骤</h2>
-<p>拷贝镜像<br>
-cp /var/lib/libvirt/images/vm3.qcow2 /var/lib/libvirt/images/vm4.qcow2<br>
-拷贝配置文件<br>
-cp /etc/libvirt/qemu/vm3.xml /etc/libvirt/qemu/vm4.xml<br>
-修改配置文件<br>
-vim /etc/libvirt/qemu/vm4.xml<br>
-notion image<br>
-用virsh创建虚拟机<br>
-virsh define /etc/libvirt/qemu/vm4.xml<br>
-重启libvirt<br>
-systemctl restart libvirtd<br>
-在宿主机上开启路由转发<br>
-vim /etc/sysctl.conf<br>
-在最后一行加入 net.ipv4.ip_forward=1<br>
-notion image<br>
-使其生效<br>
-sysctl -p<br>
-查看虚拟机是否创建成功<br>
-virt-manager</p></div>
+<div class="markdown-body" id="postBody"><h2>一、什么是DNS</h2>
+<p>DNS服务器（Domain Name System Server）是一种网络服务器，它负责将域名转换为相应的IP地址。在互联网上，每个设备都需要一个唯一的IP地址以便进行通信，但人们更倾向于记忆易懂的域名，而不是复杂的IP地址。DNS服务器充当了这个转换的中介。当您输入一个域名（<a href="http://xn--www-eo8er22f.example.com/" rel="nofollow">比如www.baidu.com</a>）时，您的计算机会向DNS服务器发送请求，以获取与该域名对应的IP地址。DNS服务器然后返回相应的IP地址，使您的设备能够连接到目标服务器或资源。</p>
+<h2>二、域名空间结构</h2>
+<p>在DNS中，域名空间结构采用分层结构，包括：根域名，顶级域，二级域和主机名称。域名空间的层次结构类似一个倒置的树状，在域名层次结构中，每一层称作一个域，每个域用一个点号"."分开。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ea7605912e8e200dda174f5c636bd01a7af345e746439027e026ca5aa75bf8fe/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303531353138343930372e706e67"><img src="https://camo.githubusercontent.com/ea7605912e8e200dda174f5c636bd01a7af345e746439027e026ca5aa75bf8fe/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303531353138343930372e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515184907.png" style="max-width: 100%;"></a></p>
+<ul>
+<li>
+<p>根域：</p>
+<p>根域是域名系统（DNS）中的最高级别域名，它位于所有其他域名的顶部。在域名系统中，根域用一个点（.）表示，它没有任何名称，只是一个单独的点。根域是DNS层次结构的起点，所有的顶级域名（Top-Level Domains，TLDs）都直接或间接地从根域下派生出来。</p>
+</li>
+<li>
+<p>顶级域</p>
+<p>DNS根域的下一级就是顶级域，顶级域大致分三种类型，表示国家和地区（cn,hk,us,uk）、表示域名的用途或类别（com,net,org,gov,edu）、新通用等级域名（top,xyz,app）</p>
+</li>
+<li>
+<p>子域</p>
+<p>子域是在较高级别域名下创建的一个子域名。通常，子域是用于组织和管理特定部门、项目或区域的域名，以便更好地组织和标识网络资源。</p>
+</li>
+<li>
+<p>主机</p>
+<p>主机名通常用于标识网络中的计算机、服务器、路由器、打印机等设备，以及提供各种网络服务的服务器，如Web服务器、邮件服务器等。主机名在网络中是唯一的，用于确保设备和服务可以被准确地标识和访问。</p>
+</li>
+</ul>
+<h2>三、域名解析方式</h2>
+<p><strong>递归查询</strong></p>
+<p>在递归解析中，客户端向本地DNS服务器发送域名查询请求。如果本地DNS服务器没有缓存该域名的解析结果，它会开始递归地向更高级别的DNS服务器发送查询，直到找到能够提供域名解析结果的顶级域名服务器。一旦找到，本地DNS服务器将把解析结果返回给客户端，并且将结果缓存在本地，以备将来的查询。</p>
+<p><strong>迭代查询</strong></p>
+<p>在迭代解析中，客户端向DNS服务器发送查询请求，DNS服务器要么返回所查询域名的解析结果，要么指示客户端向另一个DNS服务器发送查询。这个过程一直持续下去，直到找到能够提供域名解析结果的顶级域名服务器。客户端可以通过迭代查询逐级向下查询，直到获得所需的解析结果。</p>
+<table role="table">
+<thead>
+<tr>
+<th>特性</th>
+<th>递归查询</th>
+<th>迭代查询</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>谁负责执行查询</td>
+<td>服务器</td>
+<td>客户端</td>
+</tr>
+<tr>
+<td>查询次数</td>
+<td>1</td>
+<td>多个</td>
+</tr>
+<tr>
+<td>服务器负载</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>客户端工作量</td>
+<td>低</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<h2>四、DNS资源记录</h2>
+<ul>
+<li><strong>A记录（A Record）</strong>：将域名解析为IPv4地址。</li>
+<li><strong>AAAA记录（AAAA Record）</strong>：将域名解析为IPv6地址。</li>
+<li><strong>CNAME记录（CNAME Record）</strong>：将一个域名别名为另一个域名。</li>
+<li><strong>MX记录（MX Record）</strong>：指定用于处理域名的邮件服务器。</li>
+<li><strong>NS记录（NS Record）</strong>：指定授权的DNS服务器，用于解析该域名的域名。</li>
+<li><strong>PTR记录（PTR Record）</strong>：将IP地址反解析为域名。</li>
+<li><strong>SOA记录（SOA Record）</strong>：指定域名的权威服务器，并包含有关该域名的其他信息。</li>
+<li><strong>SRV记录（SRV Record）</strong>：用于指定用于特定服务的服务器，例如用于IMAP或SIP的服务器。</li>
+<li><strong>TXT记录（TXT Record）</strong>：存储与域名相关的其他信息，例如SPF记录或DKIM记录。</li>
+</ul>
+<h2>五、DNS的类型</h2>
+<p><strong>唯缓存DNS服务器</strong></p>
+<p>唯缓存DNS服务器，是一种只缓存DNS查询结果的DNS服务器。它们不维护任何区域文件，也不执行区域传输。唯缓存DNS服务器通过查询其他DNS服务器（例如递归解析器或根域名服务器）来获取DNS记录。</p>
+<p>通俗来说唯缓存DNS服务器只是一个转发器，只要在唯缓存DNS服务器上设置转发器即可</p>
+<p><strong>辅助DNS服务器</strong></p>
+<p>辅助DNS服务器（Secondary DNS Server）是DNS服务器的一种，它存储主DNS服务器（Primary DNS Server）区域文件的只读副本。辅助DNS服务器的作用是在主DNS服务器出现故障时提供冗余，以便用户仍然可以访问域名。</p>
+<p>在辅助DNS服务器上新建辅助区域，在主DNS服务器上设置区域传送</p>
+<p><strong>DNS委派</strong></p>
+<p>DNS委派（DNS Delegation）是DNS服务器层次结构中的一个重要机制，它允许将一个域的管理权限委派给另一个DNS服务器。这可以将DNS解析任务分散到多个服务器上，从而提高性能和效率。</p>
+<p>DNS委派的工作原理如下：</p>
+<p>父域将子域的DNS记录委托给子域DNS服务器。<br>
+当用户查询子域的域名时，父域DNS服务器会将查询转发给子域DNS服务器。<br>
+子域DNS服务器会解析域名并返回IP地址。</p>
+<p>主DNS服务器，将客户机的DNS请求（子域的域名的所有解析），委派给子域的DNS服务器去解析。   在主DNS服务器上建立DNS委派</p>
+<p><strong>存根区域</strong></p>
+<p>存根区域（Stub Zone）是 DNS 服务器层次结构中的一种特殊区域，它仅包含指向授权 DNS 服务器的名称服务器（NS）记录。存根区域用于在单独的 DNS 命名空间之间解析名称。</p>
+<p>跟DNS委派有些类似，但是他把任务委派给其他域的DNS服务器去解析域名。在long.com的服务器上新建存根，在smile.com的DNS服务器上设置区域传送</p>
+<h2>六、相关测试命令</h2>
+<p><code class="notranslate">nslookup</code></p>
+<p><code class="notranslate">set type=MX</code></p>
+<p><code class="notranslate">set type=PTR</code></p>
+<p><code class="notranslate">set type=NS</code></p>
+<p><code class="notranslate">ipconfig /displaydns</code>  查看DNS缓存</p>
+<p><code class="notranslate">ipconfig /flushdns</code>   清除DNS缓存</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

@@ -9,7 +9,44 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="虚拟化技术---KVM的安装">
+<meta name="description" content="## kvm相关安装包及其作用:
+qemu-kvm 主要的KVM程序包
+python-virtinst 创建虚拟机所需要的命令行工具和程序库
+virt-manager GUI虚拟机管理工具
+virt-top 虚拟机统计命令
+virt-viewer GUI连接程序，连接到已配置好的虚拟机
+libvirt C语言工具包，提供libvirt服务
+libvirt-client 为虚拟客户机提供的C语言工具包
+virt-install 基于libvirt服务的虚拟机创建命令
+bridge-utils 创建和管理桥接设备的工具
+## KVM软件安装（方法一）
+1、 环境准备
+关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为 SELinux=disabled
+vi /etc/sysconfig/selinux
+查看CPU是否⽀持VT技术
+cat /proc/cpuinfo | grep -E 'vmx|svm'
+如果输出结果包含 svm 或 vmx 字样，则表示 CPU 支持虚拟化技术。">
+<meta property="og:title" content="虚拟化技术---KVM的安装">
+<meta property="og:description" content="## kvm相关安装包及其作用:
+qemu-kvm 主要的KVM程序包
+python-virtinst 创建虚拟机所需要的命令行工具和程序库
+virt-manager GUI虚拟机管理工具
+virt-top 虚拟机统计命令
+virt-viewer GUI连接程序，连接到已配置好的虚拟机
+libvirt C语言工具包，提供libvirt服务
+libvirt-client 为虚拟客户机提供的C语言工具包
+virt-install 基于libvirt服务的虚拟机创建命令
+bridge-utils 创建和管理桥接设备的工具
+## KVM软件安装（方法一）
+1、 环境准备
+关闭SELinux，将 /etc/sysconfig/selinux 中的 SELinux=enforcing 修改为 SELinux=disabled
+vi /etc/sysconfig/selinux
+查看CPU是否⽀持VT技术
+cat /proc/cpuinfo | grep -E 'vmx|svm'
+如果输出结果包含 svm 或 vmx 字样，则表示 CPU 支持虚拟化技术。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://soslane.github.io/post/xu-ni-hua-ji-shu----KVM-de-an-zhuang.html">
+<meta property="og:image" content="https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png">
 <title>虚拟化技术---KVM的安装</title>
 
 
@@ -170,7 +207,7 @@ virt-manager</p></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
 </div>
-    <div id="footer">Copyright © <span id="year"></span><a href="https://soslane.github.io"> Fake it till you make it </a>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://soslane.github.io"> Gweek Blog </a>
 <p>
 <span id="runday"></span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a>
 </p>
