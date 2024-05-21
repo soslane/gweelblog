@@ -7,5 +7,11 @@
     "exlink":{"link":"https://withpinbox.com/items","github":"https://github.com/soslane/soslane.github.io"},
     "commentLabelColor":"#006b75",
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "script":"<script>
+    var metaTag = document.createElement('meta');
+    metaTag.setAttribute('name', 'google-site-verification');
+    metaTag.setAttribute('content', 'aZ0jcbxdF2BCpXCcil5ydASgA4UjxuyN0II51Niirg0');
+    document.head.appendChild(metaTag);
+</script>",
     "GMEEK_VERSION":"last"
 }
