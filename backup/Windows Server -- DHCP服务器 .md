@@ -128,3 +128,9 @@ EX：通过用户类标识符来识别客户端计算机——假设客户端cli
 ![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515215043.png)
 
 ![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515215100.png)
+
+## 七、超级作用域
+
+用于组织和管理 DHCP 服务器上的配置。超级作用域实际上是一个 DHCP 服务器上的逻辑集合，包含了多个作用域（Scope）。作用域是一组 IP 地址范围及其相关的配置参数，如子网掩码、默认网关、DNS 服务器等。在一个 DHCP 服务器上，可以创建多个作用域，以便为不同的网络或子网提供不同的 IP 配置。
+超级作用域的主要作用是方便管理和组织作用域。通过将作用域组织成超级作用域，管理员可以更轻松地管理大量的 DHCP 配置。
+![image](https://github.com/soslane/soslane.github.io/assets/149466045/40cd1dd7-ffe9-418f-a45f-4073bcb2c627)
