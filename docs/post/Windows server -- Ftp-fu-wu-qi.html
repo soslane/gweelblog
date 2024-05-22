@@ -89,32 +89,26 @@ b、创建FTP站点</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/21aacea36fdeb9834909345744ce522de658b674b77fccea456d0ac36b42433d/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323330302e706e67"><img src="https://camo.githubusercontent.com/21aacea36fdeb9834909345744ce522de658b674b77fccea456d0ac36b42433d/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323330302e706e67" alt="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132300.png" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132300.png" style="max-width: 100%;"></a></p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f657bc76809ff130f8e0f9effc52a60bebde9335e2f0ad438d2f57d646304e39/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323433332e706e67"><img src="https://camo.githubusercontent.com/f657bc76809ff130f8e0f9effc52a60bebde9335e2f0ad438d2f57d646304e39/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323433332e706e67" alt="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132433.png" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132433.png" style="max-width: 100%;"></a></p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/447b1e92d26338d3152d2828cb928ae48dbba48a384c4a0d00b073f2da7f770d/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323534352e706e67"><img src="https://camo.githubusercontent.com/447b1e92d26338d3152d2828cb928ae48dbba48a384c4a0d00b073f2da7f770d/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323534352e706e67" alt="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132545.png" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132545.png" style="max-width: 100%;"></a></p>
-<pre class="notranslate"><code class="notranslate">c、测试FTP站点
-</code></pre>
+<p>c、测试站点</p>
 <p>用户在客户端计算机win10-1上，打开浏览器或资源管理器，输入ftp://192.168.10.1就可以访问刚才建立的FTP站点。</p>
 <p><strong>2、创建使用域名访问的FTP站点</strong></p>
 <p>a、在DNS区域中创建别名</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/017d98454b1ca79eba406dd75167cc897af6d05a772c605ebf592f1563b0c4a8/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323730392e706e67"><img src="https://camo.githubusercontent.com/017d98454b1ca79eba406dd75167cc897af6d05a772c605ebf592f1563b0c4a8/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532323133323730392e706e67" alt="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132709.png" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132709.png" style="max-width: 100%;"></a></p>
 <p><strong>3、使用不同的端口创建FTP站点</strong></p>
 <pre class="notranslate"><code class="notranslate">a、在IIS管理器中，找到刚刚创建的FTP站点，在左侧的 "连接" 部分中选择该站点。
-
 b、在右侧的 "操作" 面板中，选择 "绑定"。
-
 c、在"站点绑定" 对话框中，点击 "添加"。
-
 d、在 "添加站点绑定" 对话框中，选择 "FTP" 作为类型，然后输入您想要使用的端口号，例如2121。
-
 e、单击 "确定" 完成端口设置。
 </code></pre>
 <p><strong>4、使用不同的IP创建FTP站点</strong></p>
-<pre class="notranslate"><code class="notranslate">a、在 Windows Server 2016 中，您可以配置多个 IP 地址以供服务器使用。确保您的服务器有多个可用的 IP 地址，以便为 FTP 站点指定不同的 IP 地址。
-b、在 IIS 管理器中，找到您刚刚创建的FTP站点，在左侧的"连接"部分中选择该站点。
-c、在右侧的 "操作" 面板中，选择 "绑定"。
-d、在 "站点绑定" 对话框中，点击 "添加"。
-e、在 "添加站点绑定" 对话框中，选择 "FTP" 作为类型。
-f、在 IP 地址下拉菜单中选择要为 FTP 站点使用的 IP 地址。
-g、输入端口号，例如默认的 FTP 端口 21，然后单击 "确定"。
-</code></pre></div>
+<p>a、在 Windows Server 2016 中，您可以配置多个 IP 地址以供服务器使用。确保您的服务器有多个可用的 IP 地址，以便为 FTP 站点指定不同的 IP 地址。<br>
+b、在 IIS 管理器中，找到您刚刚创建的FTP站点，在左侧的"连接"部分中选择该站点。<br>
+c、在右侧的 "操作" 面板中，选择 "绑定"。<br>
+d、在 "站点绑定" 对话框中，点击 "添加"。<br>
+e、在 "添加站点绑定" 对话框中，选择 "FTP" 作为类型。<br>
+f、在 IP 地址下拉菜单中选择要为 FTP 站点使用的 IP 地址。<br>
+g、输入端口号，例如默认的 FTP 端口 21，然后单击 "确定"。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
