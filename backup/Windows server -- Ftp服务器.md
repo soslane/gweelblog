@@ -29,7 +29,7 @@
 
 **2、创建使用域名访问的FTP站点**
 
-  a、在DNS区域中创建别名
+在DNS区域中创建别名
 
 ![https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132709.png](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240522132709.png)
 
