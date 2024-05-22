@@ -50,3 +50,39 @@ d、在 "站点绑定" 对话框中，点击 "添加"。
 e、在 "添加站点绑定" 对话框中，选择 "FTP" 作为类型。
 f、在 IP 地址下拉菜单中选择要为 FTP 站点使用的 IP 地址。
 g、输入端口号，例如默认的 FTP 端口 21，然后单击 "确定"。
+
+## 三、AD环境下的多用户隔离、磁盘配额
+
+服务器已安装域服务、FTP服务（IIS），要求用户目录相互隔离（仅允许访问自己的目录而无法访问他人的目录），每个用户允许使用的FTP空间大小为100M，利用活动目录FTP隔离来实现。
+
+原理：域用户登录到FTP站点时，FTP站点需要从Active Directory 域服务数据库中读取登陆用户的msIIS-FTPRoot与msIIS-FTPDir属性，以便得知其主目录的位置。但FTP站点需要提供有效的用户账户和密码，才可以读取这两个属性。需要建立一个域用户，赋予此用户读取登陆用户的这两个属性，并设置让FTP站点通过此账户来读取登陆用户的这两个属性。
+
+1、创建组织单位及用户
+
+方便进行实验，新建组织单位sales，并新建域用户salesuser1、salesuser2、salesmaster
+
+2、设置委派控制的用户
+
+右键sales——>委派任务——>添加salesmaster用户——>勾选“读取所用用户信息”——>完成
+
+3、FTP服务器配置
+
+a、C盘下新建FTP主目录FTP_sales，在主目录下再分别建立与用户名对应的文件夹salesuser1、salesuser2
+
+b、添加ftp站点 （新建ftp站点时不允许匿名访问）
+
+c、在IIS的FTP站点窗格中选择FTP用户隔离
+
+d、在Active Directory中配置的FTP主目录设置成FTP_sales
+
+e、服务器管理器——>工具——>ADSI编辑器——>操作——>连接到——>确定
+
+f、找到ou=sales 右键salesuser1属性——>找到msIIS-FTPDir 设置为salesuser1，msIIS-FTPRoot 设置为c:\FTP_sales
+
+g、使用同样的方式设置salesuser2
+
+4、设置配额
+
+右键C盘——>配额——>启动配额管理——>设置配额
+
+5、测试
