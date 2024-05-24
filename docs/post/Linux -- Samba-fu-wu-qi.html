@@ -89,7 +89,7 @@ firewall-cmd --reload
 <h2>重启并启用 Samba 服务</h2>
 <p><code class="notranslate">systemctl restart smb</code></p>
 <h2>测试</h2>
-<p>Windows 打开 文件管理器输入 \目标IP地址或主机名<br>
+<p>Windows 打开 文件管理器输入 \目标IP地址或主机名   断开已连接的用户命令：<code class="notranslate">net use * /del</code><br>
 Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%密码</p>
 <h2>Share Definitions 其他设置参数</h2>
 <p>public = yes #允许匿名访问<br>
