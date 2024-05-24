@@ -13,7 +13,6 @@
 
 ## 设置 SELinux 上下文
 ```
-yum install policycoreutils-python -y
 chcon -t samba_share_t /share
 restorecon -R /share
 ```
@@ -25,11 +24,11 @@ firewall-cmd --reload
 ```
 
 ## 重启并启用 Samba 服务
-'Systemctl restart SMB'
+`systemctl restart smb`
 
 ## 测试
-Open Windows File Manager and enter \\destination IP address or hostname 
-Linux 系统  `smbclient Destination IP address or hostname/shared directory -U Username% Password'
+Windows 打开 文件管理器输入 \\目标IP地址或主机名
+Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%密码
 
 ## Share Definitions 其他设置参数
 public = yes #允许匿名访问

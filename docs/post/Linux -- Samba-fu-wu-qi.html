@@ -79,8 +79,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><code class="notranslate">vim /etc/samba/smb.conf</code></p>
 <p>! <a href="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png" rel="nofollow"></a></p>
 <h2>设置 SELinux 上下文</h2>
-<pre class="notranslate"><code class="notranslate">yum install policycoreutils-python -y
-chcon -t samba_share_t /share
+<pre class="notranslate"><code class="notranslate">chcon -t samba_share_t /share
 restorecon -R /share
 </code></pre>
 <h2>配置防火墙</h2>
@@ -88,10 +87,10 @@ restorecon -R /share
 firewall-cmd --reload
 </code></pre>
 <h2>重启并启用 Samba 服务</h2>
-<p>'Systemctl restart SMB'</p>
+<p><code class="notranslate">systemctl restart smb</code></p>
 <h2>测试</h2>
-<p>Open Windows File Manager and enter \destination IP address or hostname<br>
-Linux 系统  `smbclient Destination IP address or hostname/shared directory -U Username% Password'</p>
+<p>Windows 打开 文件管理器输入 \目标IP地址或主机名<br>
+Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%密码</p>
 <h2>Share Definitions 其他设置参数</h2>
 <p>public = yes #允许匿名访问<br>
 public = no #禁止匿名访问</p>
