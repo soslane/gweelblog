@@ -29,4 +29,4 @@ firewall-cmd --reload
 
 ## 测试
 Windows 打开 文件管理器输入 \\目标IP地址或主机名 
-Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%密码
+Linux 系统  `smbclient //目标IP地址或主机名/共享目录 -U 用户名%密码`
