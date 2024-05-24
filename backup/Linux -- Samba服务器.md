@@ -1,4 +1,3 @@
-# 实例一
 **添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。**
 
 ## 安装 Samba
@@ -29,3 +28,5 @@ firewall-cmd --reload
 `systemctl restart smb`
 
 ## 测试
+Windows 打开 文件管理器输入 \\目标IP地址或主机名 
+Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%密码
