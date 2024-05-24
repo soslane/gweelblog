@@ -14,7 +14,7 @@
 ## 设置 SELinux 上下文
 ```
 yum install policycoreutils-python -y
-semanage fcontext -a -t samba_share_t '/share(/.*)?'
+chcon -t samba_share_t /share
 restorecon -R /share
 ```
 
