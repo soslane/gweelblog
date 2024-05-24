@@ -37,6 +37,9 @@ public = no #禁止匿名访问
 browseable = yes  #共享资源在网络浏览列表中可见
 browseable = no   #共享资源在网络浏览列表中隐藏，如需访问通过完全路径访问
 
+hosts allow = 192.168.10.    server.hello.com   #表示允许来自192.168.10网段或server.hello.com的主机访问
+hosts deny =192.168.1.    #表示不允许192.168.1网段的主机访问。 如果allow和deny冲突，allow优先
+
 valid users = username #指定哪些用户和组可以访问共享目录，多个用“,”隔开
 valid users = @组名  
 
