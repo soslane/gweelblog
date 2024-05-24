@@ -77,7 +77,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><code class="notranslate">mkdir /share</code></p>
 <h2>编辑配置文件 /etc/samba/smb.conf</h2>
 <p><code class="notranslate">vim /etc/samba/smb.conf</code></p>
-<p>! <a href="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png" rel="nofollow"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ee54e120c29db3466e6c6948f10347c175bc25c06fb4b2a90756e13e12c9d5c3/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532343134323534302e706e67"><img src="https://camo.githubusercontent.com/ee54e120c29db3466e6c6948f10347c175bc25c06fb4b2a90756e13e12c9d5c3/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532343134323534302e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png" style="max-width: 100%;"></a></p>
 <h2>设置 SELinux 上下文</h2>
 <pre class="notranslate"><code class="notranslate">chcon -t samba_share_t /share
 restorecon -R /share

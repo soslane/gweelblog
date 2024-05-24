@@ -9,7 +9,7 @@
 ## 编辑配置文件 /etc/samba/smb.conf  
 `vim /etc/samba/smb.conf`
 
-! [](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
 
 ## 设置 SELinux 上下文
 ```
