@@ -9,63 +9,11 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## 安装 Samba
-`sudo yum install samba -y`
-
-## 创建共享目录
-`mkdir /share`
-
-## 编辑配置文件 /etc/samba/smb.conf  
-`vim /etc/samba/smb.conf`
-
-![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
-
-## 设置 SELinux 上下文
-```
-yum install policycoreutils-python -y
-semanage fcontext -a -t samba_share_t '/share(/.*)?'
-restorecon -R /share
-```
-
-## 配置防火墙
-```
-firewall-cmd --permanent --zone=public --add-service=samba
-firewall-cmd --reload
-```
-
-## 重启并启用 Samba 服务
-`systemctl restart smb`
-
-## 测试。">
+<meta name="description" content="# 实例一
+**添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。">
 <meta property="og:title" content="Linux -- Samba服务器">
-<meta property="og:description" content="## 安装 Samba
-`sudo yum install samba -y`
-
-## 创建共享目录
-`mkdir /share`
-
-## 编辑配置文件 /etc/samba/smb.conf  
-`vim /etc/samba/smb.conf`
-
-![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
-
-## 设置 SELinux 上下文
-```
-yum install policycoreutils-python -y
-semanage fcontext -a -t samba_share_t '/share(/.*)?'
-restorecon -R /share
-```
-
-## 配置防火墙
-```
-firewall-cmd --permanent --zone=public --add-service=samba
-firewall-cmd --reload
-```
-
-## 重启并启用 Samba 服务
-`systemctl restart smb`
-
-## 测试。">
+<meta property="og:description" content="# 实例一
+**添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://gweek.myla.eu.org/post/Linux%20--%20Samba-fu-wu-qi.html">
 <meta property="og:image" content="https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png">
@@ -124,7 +72,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>安装 Samba</h2>
+<div class="markdown-body" id="postBody"><h1>实例一</h1>
+<p><strong>添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。</strong></p>
+<h2>安装 Samba</h2>
 <p><code class="notranslate">sudo yum install samba -y</code></p>
 <h2>创建共享目录</h2>
 <p><code class="notranslate">mkdir /share</code></p>
