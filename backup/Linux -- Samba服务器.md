@@ -34,6 +34,9 @@ Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%�
 public = yes #允许匿名访问
 public = no #禁止匿名访问
 
+browseable = yes  #共享资源在网络浏览列表中可见
+browseable = no   #共享资源在网络浏览列表中隐藏，如需访问通过完全路径访问
+
 valid users = username #指定哪些用户和组可以访问共享目录，多个用“,”隔开
 valid users = @组名  
 
