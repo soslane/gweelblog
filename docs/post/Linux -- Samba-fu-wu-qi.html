@@ -9,103 +9,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="**Add Samba server as a file server, the workgroup name is WORKGROUP, publish the shared directory/share, the share name is public, this shared directory is accessible to all employees in the company. ** 
-
-## Install Samba
-`sudo yum install samba -y`
-
-## Create a shared directory
-`mkdir /share`
-
-## 编辑配置文件 /etc/samba/smb.conf  
-`vim /etc/samba/smb.conf`
-
-! [](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
-
-## Set the SELinux context
-```
-yum install policycoreutils-python -y
-chcon -t samba_share_t /share
-restorecon -R /share
-```
-
-## Configure the firewall
-```
-firewall-cmd --permanent --zone=public --add-service=samba
-firewall-cmd --reload
-```
-
-## Restart and enable the Samba service
-'Systemctl restart SMB'
-
-## Testing
-Open Windows File Manager and enter \\destination IP address or hostname 
-Linux 系统  `smbclient Destination IP address or hostname/shared directory -U Username% Password'
-
-## Share Definitions Other configuration parameters
-public = yes #允许匿名访问
-public = no #禁止匿名访问
-
-valid users = username #若存在重要数据, which requires auditing access users
-valid users = @组名  
-
-read only = yes   #只读
-read only = no    #读写
-
-writable = yes     #读写
-writable = no      #只读
-
-write list = 用户名
-write list = @组名。">
+<meta name="description" content="**添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。">
 <meta property="og:title" content="Linux -- Samba服务器">
-<meta property="og:description" content="**Add Samba server as a file server, the workgroup name is WORKGROUP, publish the shared directory/share, the share name is public, this shared directory is accessible to all employees in the company. ** 
-
-## Install Samba
-`sudo yum install samba -y`
-
-## Create a shared directory
-`mkdir /share`
-
-## 编辑配置文件 /etc/samba/smb.conf  
-`vim /etc/samba/smb.conf`
-
-! [](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
-
-## Set the SELinux context
-```
-yum install policycoreutils-python -y
-chcon -t samba_share_t /share
-restorecon -R /share
-```
-
-## Configure the firewall
-```
-firewall-cmd --permanent --zone=public --add-service=samba
-firewall-cmd --reload
-```
-
-## Restart and enable the Samba service
-'Systemctl restart SMB'
-
-## Testing
-Open Windows File Manager and enter \\destination IP address or hostname 
-Linux 系统  `smbclient Destination IP address or hostname/shared directory -U Username% Password'
-
-## Share Definitions Other configuration parameters
-public = yes #允许匿名访问
-public = no #禁止匿名访问
-
-valid users = username #若存在重要数据, which requires auditing access users
-valid users = @组名  
-
-read only = yes   #只读
-read only = no    #读写
-
-writable = yes     #读写
-writable = no      #只读
-
-write list = 用户名
-write list = @组名。">
+<meta property="og:description" content="**添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://gweek.myla.eu.org/post/Linux%20--%20Samba-fu-wu-qi.html">
 <meta property="og:image" content="https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png">
@@ -164,29 +70,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>**Add Samba server as a file server, the workgroup name is WORKGROUP, publish the shared directory/share, the share name is public, this shared directory is accessible to all employees in the company. **</p>
-<h2>Install Samba</h2>
+<div class="markdown-body" id="postBody"><p>**添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。 **</p>
+<h2>安装 Samba</h2>
 <p><code class="notranslate">sudo yum install samba -y</code></p>
-<h2>Create a shared directory</h2>
+<h2>创建共享目录</h2>
 <p><code class="notranslate">mkdir /share</code></p>
 <h2>编辑配置文件 /etc/samba/smb.conf</h2>
 <p><code class="notranslate">vim /etc/samba/smb.conf</code></p>
 <p>! <a href="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png" rel="nofollow"></a></p>
-<h2>Set the SELinux context</h2>
+<h2>设置 SELinux 上下文</h2>
 <pre class="notranslate"><code class="notranslate">yum install policycoreutils-python -y
 chcon -t samba_share_t /share
 restorecon -R /share
 </code></pre>
-<h2>Configure the firewall</h2>
+<h2>配置防火墙</h2>
 <pre class="notranslate"><code class="notranslate">firewall-cmd --permanent --zone=public --add-service=samba
 firewall-cmd --reload
 </code></pre>
-<h2>Restart and enable the Samba service</h2>
+<h2>重启并启用 Samba 服务</h2>
 <p>'Systemctl restart SMB'</p>
-<h2>Testing</h2>
+<h2>测试</h2>
 <p>Open Windows File Manager and enter \destination IP address or hostname<br>
 Linux 系统  `smbclient Destination IP address or hostname/shared directory -U Username% Password'</p>
-<h2>Share Definitions Other configuration parameters</h2>
+<h2>Share Definitions 其他设置参数</h2>
 <p>public = yes #允许匿名访问<br>
 public = no #禁止匿名访问</p>
 <p>valid users = username #若存在重要数据, which requires auditing access users<br>
