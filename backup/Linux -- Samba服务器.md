@@ -7,12 +7,14 @@
 ## 编辑配置文件 /etc/samba/smb.conf  
 `vim /etc/samba/smb.conf`
 
-![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524141714.png)
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png)
 
 ## 设置 SELinux 上下文
+```
 yum install policycoreutils-python -y
 semanage fcontext -a -t samba_share_t '/share(/.*)?'
 restorecon -R /share
+```
 
 ## 配置防火墙
 ```
