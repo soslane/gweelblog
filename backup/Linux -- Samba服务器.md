@@ -46,8 +46,5 @@ valid users = @组名
 read only = yes   #只读
 read only = no    #读写
 
-writable = yes     #读写
-writable = no      #只读
-
 write list = 用户名
 write list = @组名
