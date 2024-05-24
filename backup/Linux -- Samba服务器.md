@@ -34,7 +34,7 @@ Linux 系统 smbclient //目标IP地址或主机名/共享目录 -U 用户名%�
 public = yes #允许匿名访问
 public = no #禁止匿名访问
 
-valid users = username #若存在重要数据, which requires auditing access users
+valid users = username #若存在重要数据, 需要审核访问用户
 valid users = @组名  
 
 read only = yes   #只读
