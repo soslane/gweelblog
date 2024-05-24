@@ -83,7 +83,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 restorecon -R /share
 </code></pre>
 <h2>配置防火墙</h2>
-<pre class="notranslate"><code class="notranslate">firewall-cmd --permanent --zone=public --add-service=samba
+<pre class="notranslate"><code class="notranslate">firewall-cmd --permanent --add-service=samba
 firewall-cmd --reload
 </code></pre>
 <h2>重启并启用 Samba 服务</h2>

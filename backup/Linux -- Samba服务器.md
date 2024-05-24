@@ -19,7 +19,7 @@ restorecon -R /share
 
 ## 配置防火墙
 ```
-firewall-cmd --permanent --zone=public --add-service=samba
+firewall-cmd --permanent --add-service=samba
 firewall-cmd --reload
 ```
 
