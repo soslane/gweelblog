@@ -1,4 +1,4 @@
-**添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。 ** 
+添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。 
 
 ## 安装 Samba
 `sudo yum install samba -y`
