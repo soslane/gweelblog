@@ -48,3 +48,59 @@ read only = no    #读写
 
 write list = 用户名
 write list = @组名
+
+
+## 举个栗子
+**建立共享目录student,它的本机路径为/home/student，只有teacher组的用户可以读写该目录，student用户只能读取**
+
+**过程：**
+
+安装samba服务器
+`yum install samba -y`
+
+为了实验方便，关闭Selinux
+`vim /etc/selinux/config`        改成disabled
+
+查看selinux状态   
+`sestatus `
+
+**1.创建组别**   
+```
+groupadd teacher
+groupadd student
+```
+**2.新建用户并加入到组** 
+```
+useradd -G teacher user1
+useradd -G student user2
+```
+**3.创建目录** 
+
+`mkdir /home/student`
+
+**4.更改目录所有者及权限**
+```
+chown user1:teacher /home/student
+chmod 775 /home/student
+```
+**5.创建samba用户**
+```
+smbpasswd -a user1
+smbpasswd -a user2
+```
+**6.编辑samba配置文件**
+
+`vim /etc/samba/smb.conf`
+
+![](https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240525210536.png)
+**7.设置防火墙**
+```
+firewall-cmd --permanent --add-service=samba
+firewall-cmd --reload
+```
+**8.重启samba服务，并开启开机自启**
+```
+systemctl restart smb
+systemctl enable smb
+```
+**9.测试**

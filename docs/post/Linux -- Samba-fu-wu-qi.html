@@ -103,7 +103,46 @@ valid users = @组名</p>
 <p>read only = yes   #只读<br>
 read only = no    #读写</p>
 <p>write list = 用户名<br>
-write list = @组名</p></div>
+write list = @组名</p>
+<h2>举个栗子</h2>
+<p><strong>建立共享目录student,它的本机路径为/home/student，只有teacher组的用户可以读写该目录，student用户只能读取</strong></p>
+<p><strong>过程：</strong></p>
+<p>安装samba服务器<br>
+<code class="notranslate">yum install samba -y</code></p>
+<p>为了实验方便，关闭Selinux<br>
+<code class="notranslate">vim /etc/selinux/config</code>        改成disabled</p>
+<p>查看selinux状态<br>
+<code class="notranslate">sestatus </code></p>
+<p><strong>1.创建组别</strong></p>
+<pre class="notranslate"><code class="notranslate">groupadd teacher
+groupadd student
+</code></pre>
+<p><strong>2.新建用户并加入到组</strong></p>
+<pre class="notranslate"><code class="notranslate">useradd -G teacher user1
+useradd -G student user2
+</code></pre>
+<p><strong>3.创建目录</strong></p>
+<p><code class="notranslate">mkdir /home/student</code></p>
+<p><strong>4.更改目录所有者及权限</strong></p>
+<pre class="notranslate"><code class="notranslate">chown user1:teacher /home/student
+chmod 775 /home/student
+</code></pre>
+<p><strong>5.创建samba用户</strong></p>
+<pre class="notranslate"><code class="notranslate">smbpasswd -a user1
+smbpasswd -a user2
+</code></pre>
+<p><strong>6.编辑samba配置文件</strong></p>
+<p><code class="notranslate">vim /etc/samba/smb.conf</code></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4e8a6932a2c65109a93b4ae3962e92d610b098088211f89d64f9f2bf772ebf13/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532353231303533362e706e67"><img src="https://camo.githubusercontent.com/4e8a6932a2c65109a93b4ae3962e92d610b098088211f89d64f9f2bf772ebf13/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532353231303533362e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240525210536.png" style="max-width: 100%;"></a><br>
+<strong>7.设置防火墙</strong></p>
+<pre class="notranslate"><code class="notranslate">firewall-cmd --permanent --add-service=samba
+firewall-cmd --reload
+</code></pre>
+<p><strong>8.重启samba服务，并开启开机自启</strong></p>
+<pre class="notranslate"><code class="notranslate">systemctl restart smb
+systemctl enable smb
+</code></pre>
+<p><strong>9.测试</strong></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
