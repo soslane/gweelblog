@@ -9,9 +9,11 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。">
+<meta name="description" content="## Samba是什么
+Samba 是一个开源的软件套件，用于在 Linux 和类 Unix 系统上实现 SMB/CIFS 协议。">
 <meta property="og:title" content="Linux -- Samba服务器">
-<meta property="og:description" content="添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。">
+<meta property="og:description" content="## Samba是什么
+Samba 是一个开源的软件套件，用于在 Linux 和类 Unix 系统上实现 SMB/CIFS 协议。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://gweek.myla.eu.org/post/Linux%20--%20Samba-fu-wu-qi.html">
 <meta property="og:image" content="https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/65bc7b61871b83018a761b2e.77daybls3p.png">
@@ -70,7 +72,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。</p>
+<div class="markdown-body" id="postBody"><h2>Samba是什么</h2>
+<p>Samba 是一个开源的软件套件，用于在 Linux 和类 Unix 系统上实现 SMB/CIFS 协议。它允许 Linux/Unix 系统上的文件和打印资源能够被 Windows 客户端访问，实现了在不同操作系统之间共享文件和打印机的功能。</p>
+<p>Samba 使用的主要协议是 SMB（Server Message Block），它是一种在网络上共享文件、打印机和其他资源的通信协议。SMB 协议提供了一种客户端/服务器模型，客户端可以请求服务器上的共享资源，服务器则向客户端提供这些资源。</p>
+<p>Samba 默认使用以下端口：<br>
+TCP 端口 139：早期版本的 SMB 服务使用此端口，主要用于文件共享和打印机服务。<br>
+TCP 端口 445：新版本的 SMB 服务通常使用此端口，它提供了更快速和安全的数据传输。</p>
+<p>总的来说，Samba 是一个用于在 Linux 和类 Unix 系统上实现 Windows 文件和打印机共享的软件，它使用 SMB/CIFS 协议，并通常使用 TCP 端口 139 和 445。</p>
+<p>添加Samba服务器作为文件服务器，工作组名为WORKGROUP，发布共享目录/share，共享名为public，这个共享目录允许公司所有员工访问。</p>
 <h2>安装 Samba</h2>
 <p><code class="notranslate">sudo yum install samba -y</code></p>
 <h2>创建共享目录</h2>
