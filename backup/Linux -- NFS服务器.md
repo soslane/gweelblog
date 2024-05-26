@@ -1,17 +1,20 @@
 ## 一、NFS服务
+
 NFS（Network File System）是一种用于在网络上共享文件系统的协议，它允许不同计算机之间通过网络共享文件和目录。NFS 最初由 Sun Microsystems 开发，并成为了 UNIX 和类 UNIX 系统中最常见的文件共享协议之一。
 
 ## 二、NFS配置
-NFS服务配置文件在/etc/exports，配置参数其结构如下：
+
+NFS服务配置文件在**/etc/exports**，配置参数其结构如下：
 **每行代表一个共享配置**：每行表示一个要共享的目录以及该目录的共享参数。
 **目录路径**：在每行的开头指定要共享的目录路径。
 **共享参数**：在目录路径之后，您可以指定一系列的共享参数，用于控制客户端对共享的访问权限和行为。
-```
-/data *(rw,sync,no_root_squash)
-/home 192.168.1.0/24(ro,sync)
-```
+
+![Untitled](https://github.com/soslane/soslane.github.io/assets/149466045/3605aae4-7bc7-4dd2-83d6-a096d2c26699)
+
 以上配置表示共享了 /data 目录给所有客户端，允许读写操作，并禁用了根用户映射；同时，将 /home 目录只读共享给 192.168.1.0/24 子网下的客户端，并要求数据同步写入磁盘。
+
 常用的共享参数：
+
 **rw**：可读可写，允许客户端对共享目录执行读取和写入操作。
 **ro**：只读，允许客户端读取共享目录中的文件，但不允许写入。
 **sync**：数据同步，NFS 服务器应立即将数据写入磁盘，以确保数据的一致性。
@@ -52,44 +55,72 @@ mount -t nfs <NFS服务器IP>:/data /mnt/nfs`
 如果一切正常，您应该能够在客户端看到共享目录中的文件和目录
 
 ## 四、再举个栗子
-**要求：搭建一个NFS服务器作为文件共享服务器，让两个Linux客户端同时挂载NFS服务器，实现两个客户端同时共享NFS服务器上的数据。共享目录/data_share**
-NFS服务器：192.168.0.1   
+
+**要求：搭建一个NFS服务器作为文件共享服务器，让两个Linux客户端同时挂载NFS服务器，实现两个客户端同时共享NFS服务器上的数据。共享目录/data\_share**
+
+NFS服务器：192.168.0.1
+
 Linux客户机1：192.168.0.10
+
 Linux客户机2：192.168.0.20
+
 首先关闭selinux
+
 `vim /etc/selinux/config`    编辑selinux配置文件
 `sestatus`                   查看selinnx状态，如果还是enable，reboot一下
+
 或者临时关闭防火墙
 `systemctl stop firewalld
 setenforce 0`
-步骤 1：安装 NFS 服务器软件包 
+
+步骤 1：安装 NFS 服务器软件包
 `yum install nfs-utils rpcbind -y`
 
 `systemctl start nfs`
 
 `systemctl enable nfs`
+
 步骤 2：编辑配置文件
+
 `vim /etc/exports`
-填入以下配置信息：
-```
-/data_share 192.168.0.0/24(rw,sync,all_squash)
-```
+
+![Untitled 1](https://github.com/soslane/soslane.github.io/assets/149466045/82e88b78-58c7-4021-8e9e-7b1650192498)
+
+
 步骤 3：配置共享目录
+
 `mkdir /data_share`    创建目录
+
 `echo share_test > /data_share/share.txt`  创建并写入share.txt文档
-更改目录权限，配置文件参数all_squash,客户端权限会降为nfsnobody
-`chown -R nfsnobody:nfsnobody /data_share` 
+
+更改目录权限，配置文件参数all\_squash,客户端权限会降为nfsnobody
+
+`chown -R nfsnobody:nfsnobody /data_share`
+
 `ls -l /data_share/`   查看权限是否设置成功
+
 步骤 4:重启服务器
-`systemctl restart nfs`  
+
+`systemctl restart nfs`
+
 或者重新加载配置文件
-`exportfs -rv`  
+
+`exportfs -rv`
+
 步骤 5:挂载NFS共享（客户端）
+
 进入客户端，安装nfs-utils
-`yum install nfs-utils -y` 
+
+`yum install nfs-utils -y`
+
 `showmount -e 192.168.0.1`    查看NFS服务器共享的目录
-`mount -t nfs 192.168.0.1:/data_share /mnt/`  将NFS共享目录/data_share挂载到客户端/mnt下
+
+`mount -t nfs 192.168.0.1:/data_share /mnt/`  将NFS共享目录/data\_share挂载到客户端/mnt下
+
 步骤 6:测试
+
 `df -h`    检查是否挂载成功
+
 `ls /mnt`  测试能否访问nfs服务器
+
 继续测试能否写入
