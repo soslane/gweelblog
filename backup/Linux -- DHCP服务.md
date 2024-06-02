@@ -1,10 +1,3 @@
-# Linux DHCP服务器
-
-type: Post
-status: Published
-date: 2024/06/02
-tags: Linux
-category: Linux
 
 ### **一、什么是DHCP服务器**
 
