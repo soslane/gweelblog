@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://pic.imgdb.cn/item/65bc7b61871b83018a761b2e.png"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -131,8 +131,10 @@ fallocate -d sparse_file<br>
 在这个命令中，sparse_file 是要转换为稀疏文件的非稀疏文件的路径。通过使用 -d 或 --dig-hole 选项，fallocate 命令将会在文件中创建一个“空洞”，即不实际分配存储空间的区域。这样就将非稀疏文件转换为稀疏文件了。<br>
 需要注意的是，fallocate 命令可能需要特定的权限才能操作文件，并且并非所有文件系统都支持稀疏文件，因此在使用 fallocate 命令时要谨慎考虑。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="http://gweek.myla.eu.org"> Gweek Blog </a>
 <p>
@@ -187,6 +189,8 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
 
 function openComments(){
     cm=document.getElementById("comments");

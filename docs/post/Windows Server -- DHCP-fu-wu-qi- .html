@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://pic.imgdb.cn/item/65bc7b61871b83018a761b2e.png"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -156,8 +156,10 @@ EX：通过用户类标识符来识别客户端计算机——假设客户端cli
 超级作用域的主要作用是方便管理和组织作用域。通过将作用域组织成超级作用域，管理员可以更轻松地管理大量的 DHCP 配置。<br>
 <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1fceb514e9c2f0fd6cdc6db34bca98b21f8b76570df81c02f48551125be5cbb9/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963782d696d616765732d686f7374696e67406d61737465722f3333323234383839332d34306364316464372d666665392d343138662d613435662d3430373362636232633632372e327275797171637331652e77656270"><img src="https://camo.githubusercontent.com/1fceb514e9c2f0fd6cdc6db34bca98b21f8b76570df81c02f48551125be5cbb9/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963782d696d616765732d686f7374696e67406d61737465722f3333323234383839332d34306364316464372d666665392d343138662d613435662d3430373362636232633632372e327275797171637331652e77656270" alt="image" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picx-images-hosting@master/332248893-40cd1dd7-ffe9-418f-a45f-4073bcb2c627.2ruyqqcs1e.webp" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="http://gweek.myla.eu.org"> Gweek Blog </a>
 <p>
@@ -217,6 +219,8 @@ cmButton=document.getElementById("cmButton");
     span.setAttribute("class","Counter");
     span.innerHTML="2";
     cmButton.appendChild(span);
+
+
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");

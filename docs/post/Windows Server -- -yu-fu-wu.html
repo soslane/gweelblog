@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://pic.imgdb.cn/item/65bc7b61871b83018a761b2e.png"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -120,8 +120,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>右键开始菜单——&gt;运行——&gt;sysprep——&gt;双击sysprep——&gt;点击通用——&gt;重新安装<br>
 <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/77b0d48a62d7cb1f0f78c63e482c69dec6a1aa9e8d69194684bc2107a16592f3/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303531353231303335382e706e67"><img src="https://camo.githubusercontent.com/77b0d48a62d7cb1f0f78c63e482c69dec6a1aa9e8d69194684bc2107a16592f3/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303531353231303335382e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240515210358.png" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="http://gweek.myla.eu.org"> Gweek Blog </a>
 <p>
@@ -176,6 +178,8 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
 
 function openComments(){
     cm=document.getElementById("comments");
