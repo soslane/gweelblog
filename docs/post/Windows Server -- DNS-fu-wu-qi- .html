@@ -102,7 +102,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>在递归解析中，客户端向本地DNS服务器发送域名查询请求。如果本地DNS服务器没有缓存该域名的解析结果，它会开始递归地向更高级别的DNS服务器发送查询，直到找到能够提供域名解析结果的顶级域名服务器。一旦找到，本地DNS服务器将把解析结果返回给客户端，并且将结果缓存在本地，以备将来的查询。</p>
 <p><strong>迭代查询</strong></p>
 <p>在迭代解析中，客户端向DNS服务器发送查询请求，DNS服务器要么返回所查询域名的解析结果，要么指示客户端向另一个DNS服务器发送查询。这个过程一直持续下去，直到找到能够提供域名解析结果的顶级域名服务器。客户端可以通过迭代查询逐级向下查询，直到获得所需的解析结果。</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>特性</th>
@@ -132,7 +132,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>高</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <h2>四、DNS资源记录</h2>
 <ul>
 <li><strong>A记录（A Record）</strong>：将域名解析为IPv4地址。</li>
