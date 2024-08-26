@@ -99,7 +99,7 @@ TCP 端口 445：新版本的 SMB 服务通常使用此端口，它提供了更�
 <p><code class="notranslate">mkdir /share</code></p>
 <h2>编辑配置文件 /etc/samba/smb.conf</h2>
 <p><code class="notranslate">vim /etc/samba/smb.conf</code></p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ee54e120c29db3466e6c6948f10347c175bc25c06fb4b2a90756e13e12c9d5c3/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532343134323534302e706e67"><img src="https://camo.githubusercontent.com/ee54e120c29db3466e6c6948f10347c175bc25c06fb4b2a90756e13e12c9d5c3/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532343134323534302e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/b0008fede55a8ae595f25f3e88be1ddc33142f0b395a55f4f05d13b9c93135cb/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532343134323534302e706e67"><img src="https://camo.githubusercontent.com/b0008fede55a8ae595f25f3e88be1ddc33142f0b395a55f4f05d13b9c93135cb/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532343134323534302e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240524142540.png" style="max-width: 100%;"></a></p>
 <h2>设置 SELinux 上下文</h2>
 <pre class="notranslate"><code class="notranslate">chcon -t samba_share_t /share
 restorecon -R /share
@@ -155,7 +155,7 @@ smbpasswd -a user2
 </code></pre>
 <p><strong>6.编辑samba配置文件</strong></p>
 <p><code class="notranslate">vim /etc/samba/smb.conf</code></p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4e8a6932a2c65109a93b4ae3962e92d610b098088211f89d64f9f2bf772ebf13/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532353231303533362e706e67"><img src="https://camo.githubusercontent.com/4e8a6932a2c65109a93b4ae3962e92d610b098088211f89d64f9f2bf772ebf13/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532353231303533362e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240525210536.png" style="max-width: 100%;"></a><br>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/f1bb2317743141ea538146f11db8ff93554d64bdd99b5fb3c9fc9993a15df686/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532353231303533362e706e67"><img src="https://camo.githubusercontent.com/f1bb2317743141ea538146f11db8ff93554d64bdd99b5fb3c9fc9993a15df686/68747470733a2f2f6a73642e63646e2e7a7a6b6f2e636e2f67682f736f736c616e652f706963676f406d61696e2f706174682f32303234303532353231303533362e706e67" alt="" data-canonical-src="https://jsd.cdn.zzko.cn/gh/soslane/picgo@main/path/20240525210536.png" style="max-width: 100%;"></a><br>
 <strong>7.设置防火墙</strong></p>
 <pre class="notranslate"><code class="notranslate">firewall-cmd --permanent --add-service=samba
 firewall-cmd --reload
